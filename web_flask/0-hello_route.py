@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-"""This script starts a Flask web application"""
-
+""" Starts a Flash Web Application """
 from flask import Flask
-
 app = Flask(__name__)
 
 
-@app.route("/airbnb-onepage/", strict_slashes=False)
-def greet():
-    """Return a greet string"""
-    return "Hello HBNB!"
-
+@app.route('/', strict_slashes=False)
+def hello_hbnb():
+    """ Prints a Message when / is called """
+    return 'Hello HBNB!'
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    """ Main Function """
+    app.run(host='0.0.0.0', port=5000)
